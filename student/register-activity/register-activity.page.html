@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ลงทะเบียนแก้กิจกรรม</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-button   expand="full" size="large" color="secondary"(click)="save_activity()">ลงทะเบียนแก้กิจกรรม</ion-button>
+<ion-list *ngFor="let item of data_set_activity">
+  <ion-card>
+      <ion-card-header>
+          <ion-card-title>แก้กิจกรรม</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+            <ion-item>
+              <ion-label>ลำดับ</ion-label>
+              <h5 style="padding-left: 15px;" [(ngModel)]="id_activity"> {{item.Activity_id}}</h5>
+          </ion-item>
+          <br>
+          <ion-item>
+              <ion-label>ชื่อกิจกรรม</ion-label>
+              <h5 style="padding-left: 15px;" > {{item.Activity_name}}</h5>
+          </ion-item>
+          <br>
+          <ion-item>
+              <ion-label>รายละเอียด</ion-label>
+              <h5 style="padding-left: 15px;"> {{item.Detail_Activity}} </h5>
+          </ion-item>
+          <br> <br>
+          <ion-item>
+              <ion-label>วันเริ่มกิจกรรม</ion-label>
+              <h5 style="padding-left: 15px;"> {{item.Date_start}} </h5>
+          </ion-item>
+          <br>
+          <br>
+          <ion-item>
+              <ion-label>วันสิ้นสุดกิจกรรม</ion-label>
+              <h5 style="padding-left: 15px;"> {{item.Date_end}} </h5>
+          </ion-item>
+          <br>
+          <ion-button   expand="full" size="large" color="secondary"(click)="register()">ลงทะเบียน</ion-button>
+       
+       
+     
+       
+      </ion-card-content>
+  </ion-card>
+
+</ion-list>
+
+
+
+</ion-content>
+
+
+
+

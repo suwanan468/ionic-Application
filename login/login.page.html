@@ -1,0 +1,37 @@
+<ion-header> </ion-header>
+
+<ion-content>
+    <ion-toolbar color="primary"> 
+        <ion-title>HTC Check-stu</ion-title>
+    </ion-toolbar>
+    <div class="container">
+        <div class="col-8 mx-auto" style="margin-top: 80px;">
+            <img src="https://seniorproject.ict.sci.psu.ac.th/students/it/std-61/468504/ionic/img/logo.png" />
+        </div>
+
+        <div style="margin-top: 60px;">
+
+            <div class="col-12 mx-auto mb-3">
+                <div class="row">
+                    <div class="col-4">
+                        <label>Username</label></div>
+                    <div class="col-8"><input type="text" class="form-control bg-dark text-white" [(ngModel)]="username" placeholder="Username"></div>
+                </div>
+            </div>
+
+            <div class="col-12 mx-auto">
+                <div class="row">
+                    <div class="col-4">
+                        <label>Password</label></div>
+                    <div class="col-8"><input type="password" class="form-control bg-dark text-white" [(ngModel)]="password" (change)="on_click_login()" placeholder="Password"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button class="btn btn-primary" (click)="on_click_login()" style="width: 100%;margin-top: 40px;">
+      Login
+    </button>
+    </div>
+</ion-content>

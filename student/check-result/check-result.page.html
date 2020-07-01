@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ดูสรุปผลการทำกิจกรรม</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="pageCheck">
+        <div class="showImageUser">
+            <img src="{{user.Stu_img}}" />
+        </div>
+        <div class="txtDetail">
+            <div class="txtName">
+                <div>ชื่อ :</div> {{user.Stu_name}}
+            </div>
+            <div class="txtId">
+                <div>รหัสนักศึกษา :</div> {{user.Stu_id}}
+            </div>
+            <div class="txtGroup">
+                <div>สาขา :</div> -
+            </div>
+        </div>
+    </div>
+    <div class="contentData">
+        <ion-segment [mode]="md" color="primary" class="customSegment" (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="SELECT_1" checked>
+                <ion-label>เทอม 1</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="SELECT_2">
+                <ion-label>เทอม 2</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+        <ngx-datatable class="material custom-table" [limit]="10" [headerHeight]="50" [rowHeight]="50" [scrollbarH]="true" [footerHeight]="0" [rows]="dataList" [columnMode]="'force'" [sortType]="'multi'">
+            <ngx-datatable-column name="percen">
+                <ng-template let-column="column" ngx-datatable-header-template> เปอร์เซ็น (%) </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="checkStu">
+                <ng-template let-column="column" ngx-datatable-header-template> การเข้าแถว </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+    </div>
+    <!-- <div class="container">
+        <div class="row  ml-2 mt-4 mr-2 ">
+            <div class="col-4">
+                <img class="show" src="{{user['Stu_img']}}" /></div>
+            <div class="col-8 profile-detail">
+                ชื่อ : {{user['Stu_name']}}<br/>รหัสนักศึกษา : {{user['Stu_id']}}<br/>สาขา :<br/>
+            </div>
+        </div>
+
+        <div *ngIf="result">
+            <div class="text-center" style="margin-top: 60px;">
+                <span class="badge badge-success text-result">ผ่านการเข้าแถว</span>
+            </div>
+            <div class="text-center" style="margin-top: 80px;">
+                <img class="img-result" src="https://img.pngio.com/passed-icons-download-1947-free-png-and-vector-icons-unlimited-passed-png-512_512.png" />
+            </div>
+        </div>
+
+        <div *ngIf="!result">
+            <div class="text-center" style="margin-top: 60px;">
+                <span class="badge badge-danger text-result">ไม่ผ่านการเข้าแถว</span>
+            </div>
+            <div class="text-center" style="margin-top: 80px;">
+                <img class="img-result" src="http://www.pngall.com/wp-content/uploads/2016/04/Red-Cross-Mark-PNG-File.png" />
+            </div>
+        </div>
+    </div> -->
+</ion-content>

@@ -1,0 +1,33 @@
+ion-menu {
+    // max-width: 70%;
+}
+
+.bar.bar-profile {
+    background-color: #444;
+    height: 170px;
+}
+
+.profile {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.profile .name {
+    color: #ffffff;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    height: 100px;
+    width: auto;
+}

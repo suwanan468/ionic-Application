@@ -1,0 +1,53 @@
+:host {
+    ion-content {
+        // background:
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        font-family: "Numans", sans-serif;
+        color: #ffffff;
+        align-content: center;
+    }
+    .container {
+        height: 100%;
+        align-content: center;
+    }
+    .card {
+        height: 250px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .card-header h3 {
+        color: white;
+        align-content: center;
+    }
+    .input-group-prepend span {
+        width: 50px;
+        color: black;
+        border: 0 !important;
+    }
+    input:focus {
+        outline: 0 0 0 0 !important;
+        box-shadow: 0 0 0 0 !important;
+    }
+    .login_btn {
+        color: black;
+        width: 100px;
+    }
+    #submis {
+        margin-left: 80px;
+        margin-right: 150px;
+        margin-top: 10%;
+        width: 250px;
+    }
+    #headerr {
+        margin-top: 30%;
+    }
+    #centerr {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10%;
+    }
+}

@@ -1,0 +1,42 @@
+.pageCheck,
+.contentData {
+    position: relative;
+    width: 30rem;
+    margin: 1rem auto;
+    display: flex;
+    .showImageUser {
+        width: 9rem;
+        display: inline-block;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .txtDetail {
+        padding: 2rem 0 0 0;
+        display: inline-table;
+        .txtName,
+        .txtId,
+        .txtGroup {
+            display: inherit;
+            margin: 0;
+            text-align: right;
+            div {
+                display: inline-block;
+                text-align: right;
+                width: 6.5rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+.contentData {
+    display: block;
+    .customSegment {
+        background-color: #f3f3f3;
+    }
+}
+
+.custom-table {
+    margin: 1.1rem 0 0.4rem 0;
+}
