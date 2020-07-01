@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>เพิ่มวันที่ไม่มีเรียนเช้า</ion-title>
+  </ion-toolbar>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item>
+      <ion-label>เลือกวัน</ion-label>
+      <ion-select value="วันจันทร์">
+        <ion-select-option value="วันจันทร์">วันจันทร์</ion-select-option>
+        <ion-select-option value="วันอังคาร">วันอังคาร</ion-select-option>
+        <ion-select-option value="วันพุธ">วันพุธ</ion-select-option>
+        <ion-select-option value="วันพฤหัสบดี">วันพฤหัสบดี</ion-select-option>
+        <ion-select-option value="วันศุกร์">วันศุกร์</ion-select-option>
+        <ion-select-option value="วันเสาร์">วันเสาร์</ion-select-option>
+        <ion-select-option value="วันอาทิตย์">วันอาทิตย์</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Year</ion-label>
+      <ion-select value="2563">
+        <ion-select-option value="2563">2563</ion-select-option>
+        <ion-select-option value="2564">2564</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">บันทึก</ion-button>
+    </div>
+    
