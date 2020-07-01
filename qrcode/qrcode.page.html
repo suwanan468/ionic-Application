@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-title>ระบบนักศึกษา</ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-menu side="start" content-id="main-content">
+        <ion-header>
+            <div class="profile">
+                <img class="profile-picture" src="{{user.Stu_img}}" />
+                <h3 class="name">{{user.Stu_name}}</h3>
+            </div>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-item (click)="_scanQr()">
+                    <ion-icon name="qr-code-outline" slot="start"></ion-icon>
+                    <span>Scan QR-CODE</span>
+                </ion-item>
+                <!-- <ion-item (click)="check()">
+                  <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+                  <span>เช็คแถวนักศึกษา</span>
+              </ion-item> -->
+                <ion-item (click)="check_result()">
+                    <ion-icon name="cellular-outline" slot="start"></ion-icon>
+                    <span>สรุปผลการเข้าแถว</span>
+                </ion-item>
+                    <ion-item (click)="register()">
+                <ion-icon name="duplicate-outline" slot="start"></ion-icon>
+                <span>ลงทะเบียนแก้กิจกรรม</span>
+            </ion-item>
+                <ion-item (click)="logout()">
+                    <ion-icon name="log-out-outline" slot="start"></ion-icon>
+                    <span>ออกจากระบบ</span>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+    </div>
+
+    <script>
+        async function openMenu() {
+            await menuController.open();
+        }
+    </script>
+</ion-content>
